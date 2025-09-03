@@ -26,7 +26,7 @@ public class DemoApplication {
     @Bean
     public CommandLineRunner run(RestTemplate restTemplate) {
         return args -> {
-            System.out.println("🚀 Starting the hiring challenge process...");
+            System.out.println(" Starting the hiring challenge process...");
 
             
             String generateWebhookUrl = "https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/JAVA";;
