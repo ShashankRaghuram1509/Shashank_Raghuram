@@ -32,7 +32,7 @@ public class DemoApplication {
     @Bean
     public CommandLineRunner run(RestTemplate restTemplate, ObjectMapper objectMapper) {
         return args -> {
-            System.out.println("🚀 Starting the hiring challenge process...");
+            System.out.println(" Starting the hiring challenge process...");
 
             String generateWebhookUrl = "https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/JAVA";
             
@@ -57,14 +57,14 @@ public class DemoApplication {
 
                 // Use the corrected field name "webhook()" here
                 if (webhookResponse == null || webhookResponse.accessToken() == null || webhookResponse.webhook() == null) {
-                    System.err.println("❌ Failed to parse the webhook URL or access token from the server response.");
+                    System.err.println(" Failed to parse the webhook URL or access token from the server response.");
                     return;
                 }
 
                 // And also here
                 String submitUrl = webhookResponse.webhook();
                 String accessToken = webhookResponse.accessToken();
-                System.out.println("✅ Webhook URL and Access Token received!");
+                System.out.println(" Webhook URL and Access Token received!");
 
                 String finalQuery = """
                 SELECT
@@ -97,10 +97,10 @@ public class DemoApplication {
                 String result = restTemplate.postForObject(submitUrl, entity, String.class);
 
                 System.out.println("   [3/3] Response from server: " + result);
-                System.out.println("🎉 Process completed successfully!");
+                System.out.println(" Process completed successfully!");
 
             } catch (Exception e) {
-                System.err.println("\n‼️ An Error Occurred ‼️");
+                System.err.println("\n‼ An Error Occurred ‼");
                 System.err.println("Error Details: " + e.getMessage());
             }
         };
