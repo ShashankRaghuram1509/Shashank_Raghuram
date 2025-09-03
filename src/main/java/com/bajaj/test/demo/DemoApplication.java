@@ -31,9 +31,9 @@ public class DemoApplication {
             
             String generateWebhookUrl = "https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/JAVA";;
             GenerateWebhookRequest initialRequest = new GenerateWebhookRequest(
-                "SHASHANK RAGHURAM",      
-                "IRF23IS407",       
-                "SHASHANKR829@GMAIL.COM" 
+                "John Doe",      
+                "REG12347",       
+                "john@example.com" 
             );
 
             System.out.println("   [1/3] Sending request to generate webhook...");
