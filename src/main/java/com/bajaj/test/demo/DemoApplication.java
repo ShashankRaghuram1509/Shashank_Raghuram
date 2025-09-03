@@ -51,7 +51,7 @@ public class DemoApplication {
                     String.class
                 );
                 
-                System.out.println("💡 Raw Server Response: " + responseEntity.getBody());
+                System.out.println(" Raw Server Response: " + responseEntity.getBody());
 
                 GenerateWebhookResponse webhookResponse = objectMapper.readValue(responseEntity.getBody(), GenerateWebhookResponse.class);
 
